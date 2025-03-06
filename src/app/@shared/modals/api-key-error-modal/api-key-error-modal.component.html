@@ -1,0 +1,19 @@
+<ng-template #content let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">Opss... You don't have API_KEY</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+	</div>
+	<div class="modal-body">
+		<p>
+      Please, create your API_KEY on
+      <a href="https://newsapi.org/">newsapi.org</a>
+    </p>
+
+    <p>
+      Then set up your API_KEY in src/environment.ts file(use NewsApiKey property for it).
+    </p>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-secondary" (click)="modal.close()">Ok</button>
+	</div>
+</ng-template>

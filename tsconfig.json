@@ -3,6 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@core/*": ["app/@core/*"],
       "@pages/*": ["app/@pages/*"],
       "@shared/*": ["app/@shared/*"],
     },
