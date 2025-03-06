@@ -13,6 +13,7 @@ import { map, filter } from 'rxjs';
 export class NewsListComponent {
     private dataService = inject(NewsDataService);
 
+    public page$ = this.dataService.currentPage$;
     public news$ = this.dataService.news$;
     public pagesCount$ = this.news$.pipe(
       filter(Boolean),

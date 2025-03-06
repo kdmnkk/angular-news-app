@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { NewsApiService } from '@core/api/news.api.service';
 import { NewsResponseInterface } from '@core/interfaces/news-response.interface';
 import { QueryInterface } from '@core/interfaces/query.interface';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +21,10 @@ export class NewsDataService {
     return this._news$.asObservable();
   }
 
+  public get currentPage$(): Observable<number> {
+    return this._query$.pipe(map((query) => query.page || 1));
+  }
+
   public getNews(): void {
     this.api.getNews(this._query$.value)?.subscribe((news) => {
       this._news$.next(news);
@@ -28,7 +32,7 @@ export class NewsDataService {
   }
 
   public setSearch(q: string) {
-    this._query$.next({ ...this._query$.value, q });
+    this._query$.next({ ...this._query$.value, page: 1, q });
   }
 
   public setPage(page: number) {

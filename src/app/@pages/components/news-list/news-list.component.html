@@ -23,7 +23,7 @@
             <ngb-pagination
               class="d-flex justify-content-center"
 	            [collectionSize]="(pagesCount$ | async) || 10"
-	            [page]="1"
+	            [page]="(page$ | async) || 1"
 	            [maxSize]="5"
 	            [rotate]="true"
 	            [ellipses]="false"
