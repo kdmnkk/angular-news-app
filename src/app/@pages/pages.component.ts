@@ -8,6 +8,4 @@ import { ChangeDetectionStrategy } from '@angular/core';
   standalone: false,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PagesComponent {
-
-}
+export class PagesComponent {}

@@ -28,7 +28,7 @@ export class NewsApiService {
 
     return this.http.get<NewsResponseInterface>(
       `${environment.NewsApiUrl}/top-headlines`,
-      { params: new HttpParams({ fromObject: params as never }) },
+      { params: new HttpParams({ fromObject: params }) },
     );
   }
 }

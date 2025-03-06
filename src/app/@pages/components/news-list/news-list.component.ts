@@ -20,7 +20,7 @@ export class NewsListComponent {
       map((news) => Math.ceil(news.totalResults / 20) * 10)
     );
 
-    public pageChange(page: any): void {
+    public pageChange(page: number): void {
       this.dataService.setPage(page);
 
       window.scroll({
