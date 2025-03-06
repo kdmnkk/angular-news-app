@@ -1,7 +1,6 @@
-<ng-template #content let-modal>
 	<div class="modal-header">
 		<h4 class="modal-title">Opss... You don't have API_KEY</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+		<button type="button" class="btn-close" aria-label="Close" (click)="dismiss()"></button>
 	</div>
 	<div class="modal-body">
 		<p>
@@ -14,6 +13,5 @@
     </p>
 	</div>
 	<div class="modal-footer">
-		<button type="button" class="btn btn-secondary" (click)="modal.close()">Ok</button>
+		<button type="button" class="btn btn-secondary" (click)="close()">Ok</button>
 	</div>
-</ng-template>

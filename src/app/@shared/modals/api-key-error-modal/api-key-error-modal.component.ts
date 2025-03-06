@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-api-key-error-modal',
@@ -9,5 +10,13 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ApiKeyErrorModalComponent {
+  constructor(private activeModal: NgbActiveModal) {}
 
+  dismiss<T = unknown>(data?: T): void {
+    this.activeModal.dismiss(data);
+  }
+
+  close<T = unknown>(data?: T): void {
+    this.activeModal.close(data);
+  }
 }

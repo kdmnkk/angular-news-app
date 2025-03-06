@@ -9,6 +9,6 @@ export class ModalService {
   private modalService = inject(NgbModal);
 
 	public openApiKeyErrorModal(): NgbModalRef {
-		return this.modalService.open(ApiKeyErrorModalComponent);
+		return this.modalService.open(ApiKeyErrorModalComponent, { centered: true });
 	}
 }
