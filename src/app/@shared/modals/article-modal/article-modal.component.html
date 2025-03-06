@@ -1,0 +1,23 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{article.title}}</h4>
+  <button type="button" class="btn-close" aria-label="Close" (click)="dismiss()"></button>
+</div>
+<div class="modal-body">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <small>Created by {{article.source.name + (article.author ? (', ' + article.author) : '')}}</small>
+    <small>{{article.publishedAt | date}}</small>
+  </div>
+
+  <p>{{article.description}}</p>
+
+  <p>{{article.content}}</p>
+
+  <div *ngIf="article.urlToImage">
+    <img class="img" src="{{article.urlToImage}}" alt="{{article.title}}">
+  </div>
+
+  <p><a href="{{article.url}}">{{article.url}}</a></p>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" (click)="close()">Ok</button>
+</div>
