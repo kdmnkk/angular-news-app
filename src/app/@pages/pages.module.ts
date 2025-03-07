@@ -11,6 +11,7 @@ import { HeaderComponent } from '@shared/layout/header/header.component';
 import { NewsFilterComponent } from "../@shared/news-filter/news-filter.component";
 import { ToastComponent } from "../@shared/toast/toast.component";
 import { PlugComponent } from "../@shared/plug/plug.component";
+import { LoaderComponent } from "../@shared/loader/loader.component";
 
 const SHARED_COMPONENTS = [
   HeaderComponent,
@@ -31,7 +32,8 @@ const SHARED_COMPONENTS = [
     ...SHARED_COMPONENTS,
     NewsFilterComponent,
     ToastComponent,
-    PlugComponent
+    PlugComponent,
+    LoaderComponent
 ]
 })
 export class PagesModule { }
