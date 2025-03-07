@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html',
+    template: '<router-outlet/>',
     styleUrls: ['./app.component.scss'],
-    standalone: false
+    standalone: false,
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
-  title = 'angular-news-app';
-}
+export class AppComponent {}

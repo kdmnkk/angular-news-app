@@ -1,0 +1,17 @@
+<div class="card mb-3" (click)="openArticle()">
+  <div class="row g-0">
+
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{article().title}}</h5>
+        <p class="card-text">{{article().description}}</p>
+        <p class="card-text"><small class="text-body-secondary">Published {{article().publishedAt | date}} by {{article().author}}({{article().source.name}})</small></p>
+      </div>
+    </div>
+    @if (article().urlToImage) {
+      <div class="col-md-4">
+        <img [src]="article().urlToImage" class="img img-fluid rounded-end" [alt]="article().title">
+      </div>
+    }
+  </div>
+</div>
