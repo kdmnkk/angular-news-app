@@ -3,4 +3,5 @@ export interface QueryInterface {
   page?: number;
   category?: string;
   country?: string;
+  pageSize?: number;
 }

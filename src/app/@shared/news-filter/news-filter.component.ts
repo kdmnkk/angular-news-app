@@ -52,6 +52,6 @@ export class NewsFilterComponent {
 
   public clearFilters(): void {
     this.formGroup.reset();
-    this.dataService.setQuery({});
+    this.dataService.resetQuery();
   }
 }

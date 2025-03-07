@@ -1,0 +1,8 @@
+@for (toast of toastService.toasts$ | async; track toast.message) {
+  <ngb-toast
+    [header]="toast.header"
+    [autohide]="true"
+    [delay]="toast.delay || 5000"
+    (hidden)="toastService.remove(toast)"
+  >{{ toast.message }}</ngb-toast>
+}

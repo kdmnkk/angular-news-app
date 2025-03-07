@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { newsInterceptor } from '@core/interceptors/news.interceptor';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { provideHttpClient } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [provideHttpClient()],
+  providers: [provideHttpClient(withInterceptors([newsInterceptor]))],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
