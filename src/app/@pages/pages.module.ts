@@ -10,6 +10,7 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from '@shared/layout/header/header.component';
 import { NewsFilterComponent } from "../@shared/news-filter/news-filter.component";
 import { ToastComponent } from "../@shared/toast/toast.component";
+import { PlugComponent } from "../@shared/plug/plug.component";
 
 const SHARED_COMPONENTS = [
   HeaderComponent,
@@ -29,7 +30,8 @@ const SHARED_COMPONENTS = [
     NgbPaginationModule,
     ...SHARED_COMPONENTS,
     NewsFilterComponent,
-    ToastComponent
+    ToastComponent,
+    PlugComponent
 ]
 })
 export class PagesModule { }
