@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from '@pages/pages.component';
-import { NewsCardComponent } from '@pages/components/news-card/news-card.component';
-import { NewsListComponent } from '@pages/components/news-list/news-list.component';
+import { NewsCardComponent } from '@pages/news-list/news-card/news-card.component';
+import { NewsListComponent } from '@pages/news-list/news-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from '@shared/layout/header/header.component';
+import { NewsFilterComponent } from "../@shared/news-filter/news-filter.component";
 
 const SHARED_COMPONENTS = [
   HeaderComponent,
@@ -26,6 +27,7 @@ const SHARED_COMPONENTS = [
     NgbModule,
     NgbPaginationModule,
     ...SHARED_COMPONENTS,
-  ]
+    NewsFilterComponent
+]
 })
 export class PagesModule { }

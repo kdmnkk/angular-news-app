@@ -1,4 +1,4 @@
 export const environment = {
-  NewsApiUrl: 'https://newsapi.org/v2',
-  NewsApiKey: '',
+  newsApiUrl: 'https://newsapi.org/v2',
+  newsApiKey: '',
 };

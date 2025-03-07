@@ -31,11 +31,11 @@ export class NewsDataService {
     });
   }
 
-  public setSearch(q: string) {
-    this._query$.next({ ...this._query$.value, page: 1, q });
-  }
-
   public setPage(page: number) {
     this._query$.next({ ...this._query$.value, page });
+  }
+
+  public setQuery(query: QueryInterface) {
+    this._query$.next({ ...query, page: 1 });
   }
 }

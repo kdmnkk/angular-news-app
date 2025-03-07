@@ -29,9 +29,4 @@ export class NewsListComponent {
         behavior: 'smooth'
       });
     }
-
-    public search(event: Event): void {
-      const element = event.currentTarget as HTMLInputElement;
-      this.dataService.setSearch(element.value);
-    }
   }
